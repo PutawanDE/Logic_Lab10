@@ -1,8 +1,8 @@
 `include "D_FF.v"
 
-module two_way_count_g(q, l,x, clk, reset);
+module two_way_count_g(l ,x, clk, reset);
     input x, clk, reset;
-    output [1:0] q;
+    wire [1:0] q;
     
     wire w_xor0, w_xor1, w_not0;
 

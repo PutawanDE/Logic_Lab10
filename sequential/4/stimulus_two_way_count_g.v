@@ -3,12 +3,12 @@
 module stimulus_two_way_count_g;
     reg x;
     reg clk, reset;
-    wire [1:0]q;
+  
 
     wire l;
     assign L = l;
 
-    two_way_count_g c0(q, l, x, clk, reset);
+    two_way_count_g c0( l, x, clk, reset);
 
     initial begin
 		$dumpfile("two_way_count_g.vcd");
@@ -33,5 +33,5 @@ x = 1'b0;
 	end
 	
 	initial
-		$monitor($time, " output L = %d  q = %d (%d%d) reset = %d x = %d",L, q, q[1], q[0], reset, x);
+		$monitor($time, " output L = %d   reset = %d x = %d",L, reset, x);
 endmodule
