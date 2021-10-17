@@ -11,7 +11,7 @@ module stimulus_two_way_count_g;
     two_way_count_g c0(q, l, x, clk, reset);
 
     initial begin
-		$dumpfile("two_way_count.vcd");
+		$dumpfile("two_way_count_g.vcd");
         $dumpvars(0, c0);
 		clk = 1'b0;
         x = 1'b0;
